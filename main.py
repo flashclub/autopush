@@ -25,7 +25,7 @@ class AutoSave:
     def input_path(self):
         path = input("Please input program path:")
         print('path', path)
-        if path is None:
+        if not path:
             print('path is empty')
             return self.input_path()
 

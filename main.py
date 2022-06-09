@@ -2,7 +2,7 @@ from ast import IsNot
 import datetime
 import time
 import git
-from colorama import Fore,Back,Style
+from colorama import Fore, Back, Style
 
 
 class AutoSave:
@@ -13,21 +13,19 @@ class AutoSave:
         path = self.input_path()
 
         while True:
-            print('start loop')
+            print(Fore.GREEN + 'start loop')
             try:
                 result = self.save_code(path)
                 if not result:
-                    print('path is error')
+                    print(Fore.RED + 'path is error')
             except BaseException as e:
-                # print(e)
                 pass
             time.sleep(10)
 
     def input_path(self):
         path = input("Please input program path:")
-        print('path', path)
         if not path:
-            print('path is empty')
+            print(Fore.YELLOW + 'path is empty')
             return self.input_path()
 
         return path
@@ -38,20 +36,20 @@ class AutoSave:
             repo = git.cmd.Git(path)
 
         except BaseException as e:
-            print('path error')
+            print(Fore.RED + 'path error')
             return False
         try:
             repo.add('.')
         except BaseException as e:
-            print('nothing to add')
+            print(Fore.YELLOW + 'nothing to add')
             pass
         try:
             repo.commit('-m update')
         except BaseException as e:
-            print('nothing to commit')
+            print(Fore.YELLOW + 'nothing to commit')
             pass
         repo.push()
-        print('push over')
+        print(Fore.GREEN + 'push over')
         return True
 
 

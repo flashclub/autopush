@@ -13,7 +13,7 @@ class AutoSave:
             try:
                 self.save_code()
             except BaseException as e:
-                print(e)
+                # print(e)
                 pass
             time.sleep(10)
 
@@ -22,12 +22,12 @@ class AutoSave:
         try:
             repo.add('.')
         except BaseException as e:
-            print('nothing add')
+            print('nothing to add')
             pass
         try:
             repo.commit('-m update')
         except BaseException as e:
-            print('nothing commit')
+            print('nothing to commit')
             pass
         repo.push()
         print('push over')

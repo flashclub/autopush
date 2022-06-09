@@ -1,4 +1,4 @@
-auto save your project once in 10 secondsyour project
+auto save your project once in 10 seconds
 
 # Use This Project
 

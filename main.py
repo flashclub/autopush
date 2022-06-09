@@ -9,7 +9,7 @@ class AutoSave:
 
     def loop_task(self):
         while True:
-            print('执行循环-000')
+            print('start loop')
             try:
                 self.save_code()
             except BaseException as e:
@@ -19,12 +19,18 @@ class AutoSave:
 
     def save_code(self):
         repo = git.cmd.Git('~/Documents/code/timertask')
-        repo.add('.')
-        print('执行 add')
-        repo.commit('-m update')
-        print('执行 commit')
+        try:
+            repo.add('.')
+        except BaseException as e:
+            print('nothing add')
+            pass
+        try:
+            repo.commit('-m update')
+        except BaseException as e:
+            print('nothing commit')
+            pass
         repo.push()
-        print('执行 push')
+        print('push over')
 
 
 if __name__ == '__main__':

@@ -9,7 +9,7 @@ class AutoSave:
 
     def loop_task(self):
         while True:
-            print('执行循环-2')
+            print('执行循环-000')
             try:
                 self.save_code()
             except BaseException as e:

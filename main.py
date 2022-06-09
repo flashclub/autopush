@@ -23,7 +23,7 @@ class AutoSave:
             time.sleep(10)
 
     def input_path(self):
-        path = input("Please input program path:")
+        path = input(Fore.YELLOW + "Please input program path:")
         if not path:
             print(Fore.YELLOW + 'path is empty')
             return self.input_path()

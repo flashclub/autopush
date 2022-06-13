@@ -19,9 +19,9 @@ class AutoSave:
                         print(Fore.RED + 'path is error')
                 except BaseException as e:
                     pass
-                time.sleep(10)
+                time.sleep(loopTime)
         except BaseException as e:
-            print(Fore.RED + '\nTask Stop')
+            print(Fore.RED + '\n===============================================\n===================Task Stop===================\n===============================================\n')
             print(Style.RESET_ALL)
             return
 

@@ -14,6 +14,5 @@ auto save your project once in 10 seconds
 - [X] default push frequency
 - [ ] config push frequency
 - [ ] analyze documents and submit records of changes
-- [ ]
 
 this project update by [timetask](https://github.com/flashclub/timertask)

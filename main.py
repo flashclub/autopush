@@ -31,7 +31,7 @@ class AutoSave:
         time = input(
             Fore.YELLOW + "Please enter the time of each push（in minutes）: ")
         if not time:
-            print(Fore.YELLOW + 'time is 20 minute')
+            print(Fore.YELLOW + 'time is 20 minutes')
             return 20
         if not time.isdigit():
             print(Fore.RED + 'time is not number')

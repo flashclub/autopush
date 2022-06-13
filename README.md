@@ -7,4 +7,12 @@ auto save your project once in 10 seconds
 3. `pip3 install -r requirements.txt`
 4. `python3 main.py`
 
+
+# To Do List
+
+- [X] auto commit code
+- [X] default commit frequency
+- [ ] analysis file change and commit info
+- [ ] 
+
 this project update by [timetask](https://github.com/flashclub/timertask)

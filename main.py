@@ -19,7 +19,7 @@ class AutoSave:
                         print(Fore.RED + 'path is error')
                 except BaseException as e:
                     pass
-                time.sleep(loopTime)
+                time.sleep(loopTime * 60)
         except BaseException as e:
             print('error info')
             print(e)
@@ -31,8 +31,8 @@ class AutoSave:
         time = input(
             Fore.YELLOW + "Please enter the time of each push（in minutes）: ")
         if not time:
-            print(Fore.YELLOW + 'time is 1 minutes')
-            return 1
+            print(Fore.YELLOW + 'time is 20 minute')
+            return 20
         if not time.isdigit():
             print(Fore.RED + 'time is not number')
             return self.input_loopTime()

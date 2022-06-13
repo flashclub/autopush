@@ -18,8 +18,11 @@ class AutoSave:
                 pass
             time.sleep(10)
     def input_loopTime(self):
-        path = input(Fore.YELLOW + "Please input update time: ")
-        
+        time = input(Fore.YELLOW + "Please enter the time of each push: ")
+        if not time:
+            print(Fore.YELLOW + 'time is 10 sec')
+            return 10
+        return time
     def input_path(self):
         path = input(Fore.YELLOW + "Please input program path: ")
         if not path:

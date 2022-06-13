@@ -25,6 +25,8 @@ class AutoSave:
         if not time.isdigit():
             print(Fore.RED + 'time is not number')
             self.input_loopTime()
+        print(Fore.GREEN + 'time is not number')
+        
         return time
     def input_path(self):
         path = input(Fore.YELLOW + "Please input program path: ")

@@ -12,7 +12,6 @@ auto save your project once in 10 seconds
 
 - [X] auto commit code
 - [X] default commit frequency
-- [ ] analysis file change and commit info
-- [ ] 
+- [ ] analyze documents and submit records of changes
 
 this project update by [timetask](https://github.com/flashclub/timertask)

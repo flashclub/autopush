@@ -21,6 +21,8 @@ class AutoSave:
                     pass
                 time.sleep(loopTime)
         except BaseException as e:
+            print('error info')
+            print(e)
             print(Fore.RED + '\n===============================================\n===================Task Stop===================\n===============================================\n')
             print(Style.RESET_ALL)
             return

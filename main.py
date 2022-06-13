@@ -7,6 +7,7 @@ class AutoSave:
         self.loop_task()
     def loop_task(self):
         path = self.input_path()
+        loopTime = self.input_loopTime()
         while True:
             print(Fore.GREEN + 'start loop')
             try:
@@ -16,8 +17,11 @@ class AutoSave:
             except BaseException as e:
                 pass
             time.sleep(10)
+    def input_loopTime(self):
+        path = input(Fore.YELLOW + "Please input update time: ")
+        
     def input_path(self):
-        path = input(Fore.YELLOW + "Please input program path:")
+        path = input(Fore.YELLOW + "Please input program path: ")
         if not path:
             print(Fore.YELLOW + 'path is empty')
             return self.input_path()

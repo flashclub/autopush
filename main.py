@@ -35,9 +35,9 @@ class AutoSave:
             return 10
         if not time.isdigit():
             print(Fore.RED + 'time is not number')
-            self.input_loopTime()
+            return self.input_loopTime()
         print(Fore.GREEN + 'push frequency is once every ' + str(time) + ' seconds')
-        return time
+        return time.isdigit()
 
     def input_path(self):
         path = input(Fore.YELLOW + "Please input program path: ")

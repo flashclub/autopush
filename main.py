@@ -29,14 +29,14 @@ class AutoSave:
 
     def input_loopTime(self):
         time = input(
-            Fore.YELLOW + "Please enter the time of each push（in seconds）: ")
+            Fore.YELLOW + "Please enter the time of each push（in minutes）: ")
         if not time:
-            print(Fore.YELLOW + 'time is 10 sec')
-            return 10
+            print(Fore.YELLOW + 'time is 1 minutes')
+            return 1
         if not time.isdigit():
             print(Fore.RED + 'time is not number')
             return self.input_loopTime()
-        print(Fore.GREEN + 'push frequency is once every ' + str(time) + ' seconds')
+        print(Fore.GREEN + 'push frequency is once every ' + str(time) + 'minutes')
         return time.isdigit()
 
     def input_path(self):

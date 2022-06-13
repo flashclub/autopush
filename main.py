@@ -21,7 +21,7 @@ class AutoSave:
                     pass
                 time.sleep(10)
         except BaseException as e:
-            print(Fore.RED + 'Task Stop')
+            print(Fore.RED + '\nTask Stop')
             print(Style.RESET_ALL)
             return
 

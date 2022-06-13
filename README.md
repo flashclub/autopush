@@ -10,9 +10,9 @@ auto save your project once in 10 seconds
 
 # To Do List
 
-- [X] auto commit code
-- [X] default commit frequency
-- [ ] config default commit time
+- [X] auto push code
+- [X] default push frequency
+- [ ] config push frequency
 - [ ] analyze documents and submit records of changes
 - [ ]
 

@@ -33,7 +33,7 @@ class AutoSave:
 
     def input_loopTime(self):
         time = input(
-            Fore.YELLOW + "Please enter the time of each push（in minutes, default is 20 minutes）: ")
+            Fore.YELLOW + "How many minutes would you like to be pushed（default is 20 ）: ")
         if not time:
             print(Fore.YELLOW + 'time is 20 minutes')
             return 20
@@ -44,7 +44,7 @@ class AutoSave:
         return time.isdigit()
 
     def input_path(self):
-        path = input(Fore.YELLOW + "Please input program path: ")
+        path = input(Fore.YELLOW + "Which project do you want to sync automatically: ")
         if not path:
             print(Fore.YELLOW + 'path is empty')
             return self.input_path()

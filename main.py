@@ -59,6 +59,7 @@ class AutoSave:
             pass
         try:
             repo.commit('-m update')
+            print(Fore.GREEN + 'commit over')
         except BaseException as e:
             print(Fore.YELLOW + 'nothing to commit')
             pass

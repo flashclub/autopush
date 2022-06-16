@@ -5,7 +5,11 @@ from colorama import Fore, Back, Style
 
 class AutoSave:
     def __init__(self):
-        self.loop_task()
+        try:
+            self.loop_task()
+        except BaseException as e:
+            print(Style.RESET_ALL)
+            pass
 
     def loop_task(self):
         path = self.input_path()

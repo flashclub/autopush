@@ -63,7 +63,7 @@ class AutoSave:
             print(Fore.YELLOW + 'nothing to commit')
             pass
         repo.push()
-        print(Fore.GREEN + 'push over')
+        print(Fore.GREEN + '🎉push over🎉')
         return True
 
 if __name__ == '__main__':

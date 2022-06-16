@@ -29,7 +29,7 @@ class AutoSave:
 
     def input_loopTime(self):
         time = input(
-            Fore.YELLOW + "Please enter the time of each push（in minutes）: ")
+            Fore.YELLOW + "Please enter the time of each push（in minutes, default is 20 minutes）: ")
         if not time:
             print(Fore.YELLOW + 'time is 20 minutes')
             return 20

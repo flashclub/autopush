@@ -73,7 +73,7 @@ class AutoSave:
             print(Fore.YELLOW + 'nothing to commit')
             pass
         repo.push()
-        print(Fore.GREEN + '🎉🎉🎉 ' + self.path + ' push over 🎉🎉🎉')
+        print(Fore.GREEN + '🎉🎉🎉 [' + self.path + '] push over 🎉🎉🎉')
         return True
 
 if __name__ == '__main__':

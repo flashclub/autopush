@@ -16,7 +16,7 @@ class AutoSave:
         path = self.input_path()
         loopTime = self.input_loopTime()
         print('push minute--')
-        print(loopTime)
+        print(loopTime*60)
         try:
             while True:
                 print(Fore.GREEN + 'start loop')

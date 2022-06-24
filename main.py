@@ -42,7 +42,12 @@ class AutoSave:
             return self.input_loopTime()
         print(Fore.GREEN + 'push frequency is once every ' + str(time) + 'minutes')
         return time.isdigit()
-
+    def checkTime(self, inputTime):
+        if not inputTime:
+            return 20
+        if not inputTime.isdigit():
+            return False
+        return inputTime.isdigit()
     def input_path(self):
         path = input(Fore.YELLOW + "Which project do you want to sync automatically: ")
         if not path:

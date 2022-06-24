@@ -1,4 +1,5 @@
 import time
+from cv2 import log
 import git
 from colorama import Fore, Back, Style
 
@@ -14,6 +15,8 @@ class AutoSave:
     def loop_task(self):
         path = self.input_path()
         loopTime = self.input_loopTime()
+        print('push minute--')
+        print(loopTime)
         try:
             while True:
                 print(Fore.GREEN + 'start loop')

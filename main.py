@@ -6,6 +6,7 @@ from colorama import Fore, Back, Style
 
 class AutoSave:
     def __init__(self):
+        self.path = ''
         try:
             self.loop_task()
         except BaseException as e:
@@ -14,6 +15,7 @@ class AutoSave:
 
     def loop_task(self):
         path = self.input_path()
+        self.path = path
         loopTime = self.input_loopTime()
         print('push minute--')
         print(loopTime*60)
@@ -37,16 +39,8 @@ class AutoSave:
     def input_loopTime(self):
         time = input(
             Fore.YELLOW + "How many minutes would you like to be pushed（default is 20 ）: ")
-        # checkResult = self.checkTime(time)
-        # if not time:
-        #     print(Fore.YELLOW + 'time is 20 minutes')
-        #     return 20
-        # if not time.isdigit():
-        #     print(Fore.RED + 'time is not number')
-        #     return self.input_loopTime()
-        # print(Fore.GREEN + 'push frequency is once every ' + str(time) + 'minutes')
-        # return time.isdigit()
         return self.checkTime(time)
+    
     def checkTime(self, inputTime):
         if not inputTime:
             print(Fore.YELLOW + 'time is 20 minutes')
@@ -81,7 +75,7 @@ class AutoSave:
             print(Fore.YELLOW + 'nothing to commit')
             pass
         repo.push()
-        print(Fore.GREEN + '🎉push over🎉')
+        print(Fore.GREEN + '🎉' + self.path + 'push over🎉')
         return True
 
 if __name__ == '__main__':
